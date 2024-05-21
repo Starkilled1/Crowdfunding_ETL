@@ -1,4 +1,5 @@
-﻿CREATE DATABASE crowdfunding_db;
+﻿-- In Case the db is not created, run this section in order to create the db
+CREATE DATABASE crowdfunding_db;
 
 CREATE TABLE CATEGORY (
     category_id VARCHAR(30) NOT NULL,
