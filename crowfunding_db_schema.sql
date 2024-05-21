@@ -1,4 +1,6 @@
-﻿CREATE TABLE CATEGORY (
+﻿CREATE DATABASE crowdfunding_db;
+
+CREATE TABLE CATEGORY (
     category_id VARCHAR(30) NOT NULL,
     category VARCHAR(30) NOT NULL,
     CONSTRAINT pk_CATEGORY PRIMARY KEY (category_id)
