@@ -68,3 +68,27 @@ SELECT * FROM CONTACTS;
 -- Verify CAMPAIGN table data
 SELECT * FROM CAMPAIGN;
 
+-- TEST query to see foreign keys
+SELECT
+    c.cf_id,
+    c.contact_id,
+    c.company_name,
+    c.description,
+    c.goal,
+    c.pledged,
+    c.outcome,
+    c.backers_count,
+    c.country,
+    c.currency,
+    c.launch_date,
+    c.end_date,
+    c.staff_pick,
+    c.spotlight,
+    cat.category AS category_name,
+    sub.subcategory AS subcategory_name
+FROM
+    CAMPAIGN c
+JOIN
+    CATEGORY cat ON c.category_id = cat.category_id
+JOIN
+    SUBCATEGORY sub ON c.subcategory_id = sub.subcategory_id;
